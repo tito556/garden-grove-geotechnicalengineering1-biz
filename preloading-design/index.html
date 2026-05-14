@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#2F4F4F) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <nav class="navbar">
@@ -184,7 +220,7 @@ header.hero, .hero { position: relative !important; }
 
 <section class="section"><h2>Relevant standards</h2>
 <hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
-<p>IBC 2021 Section 1804 (Bearing and Settlement), ASCE 7-16 Chapter 11 (Seismic Loads on Foundations), ASTM D2435 (Standard Test Method for One-Dimensional Consolidation Properties of Soils)</p></section>
+<p>IBC 2021 Section 1804 (Bearing and Settlement), ASCE 7-16 Chapter 11 (Seismic Loads on <a href="/foundations/">Foundations</a>), ASTM D2435 (Standard Test Method for One-Dimensional Consolidation Properties of Soils)</p></section>
 
 <section class="section"><h2>Q&A</h2><details><summary>How long does a preloading program typically take in Garden Grove?</summary><p>For a typical clay layer 15 to 25 feet thick, the time to reach 90% primary consolidation ranges from 2 to 8 months. The exact duration depends on the coefficient of consolidation (cv) and the drainage path length.</p></details><details><summary>What is the cost range for a preloading design study?</summary><p>The design study including field exploration, lab testing, and the <a href="../settlement-analysis/" data-interlink="1">settlement analysis</a> typically falls between US$690 and US$2,290. The final cost depends on the number of borings and the complexity of the stratigraphy.</p></details><details><summary>Can preloading be combined with wick drains on a Garden Grove site?</summary><p>Yes. When the clay layer is thick or the consolidation time is too long for the schedule, we design vertical wick drains to shorten the drainage path. The preloading design then incorporates the drain spacing and equivalent cv.</p></details></section>
 

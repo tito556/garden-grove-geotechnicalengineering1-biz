@@ -116,6 +116,42 @@ header.hero, .hero { position: relative !important; }
 .leaflet-control { z-index: 800 !important; }
 .leaflet-container { z-index: 1 !important; }
 </style>
+<style id="inline-link-style">
+p a[href^="/"]:not(.cta-btn):not(.hero-cta){color:var(--accent,#2F4F4F) !important;text-decoration:underline !important;text-decoration-color:rgba(29,78,216,.45);text-underline-offset:2px;font-weight:600}
+p a[href^="/"]:not(.cta-btn):not(.hero-cta):hover{text-decoration-color:currentColor;opacity:.85}
+</style>
+<style id="navbar-compact-fix">
+/* Compactar navbar para que el menú entre completo */
+.navbar{padding:.65rem 1rem !important}
+.navbar .nav{gap:.55rem !important}
+.nav-item{font-size:.74rem !important;letter-spacing:.01em !important}
+.nav-item.has-dd .nav-cat-link{padding:.4rem .25rem !important}
+.nav-item.has-dd .nav-arrow{font-size:.7rem !important;margin-left:.15rem !important}
+.cta-btn{padding:.45rem .8rem !important;font-size:.72rem !important;letter-spacing:.03em !important}
+.logo-box,.brand-name,.brand{font-size:.82rem !important}
+.logo-text .main{font-size:.95rem !important}
+.logo-text .sub{font-size:.72rem !important}
+/* Para layouts aberdeen/classic con clase distinta */
+header nav a,.menu a{font-size:.78rem !important}
+@media (max-width:1100px){
+  .nav-item{font-size:.7rem !important}
+  .navbar .nav{gap:.4rem !important}
+  .cta-btn{padding:.4rem .65rem !important;font-size:.68rem !important}
+}
+</style>
+<style id="layout-defensive">
+html,body{overflow-x:hidden;max-width:100vw}
+body>*{max-width:100vw}
+@media (min-width:901px){
+  aside{position:relative}
+  aside+main,aside~main,aside~div>main{margin-left:0}
+  .content-area{display:flex;gap:1rem}
+}
+@media (max-width:900px){
+  aside{width:100% !important;position:static !important;height:auto !important}
+  .navbar{flex-wrap:wrap}
+}
+</style>
 </head><body>
 
 <nav class="navbar">
@@ -184,7 +220,7 @@ header.hero, .hero { position: relative !important; }
 
 <section class="section"><h2>Relevant standards</h2>
 <hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
-<p>ASTM A572 / A572M (steel sheet piling), ASCE 7-22 (seismic earth pressures), IBC 2021 Chapter 18 (excavation support)</p></section>
+<p>ASTM A572 / A572M (steel sheet piling), ASCE 7-22 (<a href="/seismic/">seismic</a> earth pressures), IBC 2021 Chapter 18 (excavation support)</p></section>
 
 <section class="section"><h2>Q&A</h2><details><summary>What is the typical embedment depth for a sheet pile wall in Garden Grove?</summary><p>For a cantilevered wall retaining 10 feet of sand, we usually embed the piles to a depth equal to 1.2 times the retained height. In anchored walls, the embedment can be reduced to 0.6 times the retained height, provided the passive resistance zone is verified with SPT blow counts.</p></details><details><summary>How much does sheet pile wall design cost in Garden Grove?</summary><p>A complete design package for a typical residential or commercial excavation runs between US$1,350 and US$5,940, depending on wall height, number of tieback rows, and the need for seismic analysis. A simplified cantilever wall design for a shallow trench on private property is usually at the lower end of that range.</p></details><details><summary>Do I need a sheet pile wall for a 12-foot-deep excavation in sandy soil?</summary><p>Not always, but it is the safest option. For Garden Grove's loose to medium-dense sands with groundwater at 5 feet, a soldier pile and lagging system with dewatering may work, but the sheet pile provides a continuous barrier that prevents raveling and reduces water inflow. We always run a stability analysis before recommending the final system.</p></details><details><summary>What is the difference between a cantilevered and an anchored sheet pile wall?</summary><p>A cantilevered wall relies entirely on its embedment depth for stability, so it requires deeper piles. An anchored wall uses one or more rows of tiebacks or ground anchors to transfer the lateral load into the soil behind the wall, allowing a shorter embedment. Anchored walls are typical for heights above 15 feet in Garden Grove.</p></details></section>
 
